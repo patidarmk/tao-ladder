@@ -85,10 +85,21 @@ export default {
             height: "0",
           },
         },
+        "shake": {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-5px)' },
+          '20%, 40%, 60%, 80%': { transform: 'translateX(5px)' },
+        },
+        "ping-fade-out": {
+          '0%': { transform: 'scale(0.5)', opacity: '1' },
+          '100%': { transform: 'scale(1.5)', opacity: '0' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "shake": "shake 0.5s ease-in-out",
+        "ping-fade-out": "ping-fade-out 0.7s cubic-bezier(0, 0, 0.2, 1) forwards",
       },
     },
   },
